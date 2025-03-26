@@ -1,1 +1,65 @@
-nice
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Money</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .link-button {
+            padding: 20px 40px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .link-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Deposit Money to 0725807341</h1>
+        <p>Please click the button below to initiate the deposit.</p>
+        <a href="#" class="link-button" onclick="promptDeposit()">Deposit 1000 Shillings</a>
+    </div>
+
+    <script>
+        function promptDeposit() {
+            const message = "Please send 1000 shillings to the number 0725807341.";
+            const userConfirmed = confirm(message);
+            
+            if (userConfirmed) {
+                alert("Thank you for confirming the deposit. Please proceed to send 1000 shillings to 0725807341.");
+                // You can redirect the user to a payment page here if you integrate a payment API.
+            } else {
+                alert("Deposit action cancelled.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
